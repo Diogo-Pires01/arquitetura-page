@@ -6,6 +6,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -154,16 +159,37 @@ html {
 }
 
 @media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .hero {
+    align-items: flex-start;
+    padding-top: 4rem;
+  }
+
   .hero-overlay {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
   }
 
   .hero-content {
     padding: 0 1.5rem;
   }
 
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
   .hero-sub br {
     display: none;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .hero-ctas .btn {
+    text-align: center;
   }
 }
 
@@ -219,6 +245,10 @@ html {
 }
 
 @media (max-width: 768px) {
+  .sobre {
+    padding: 4rem 0;
+  }
+
   .sobre-container {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -226,6 +256,14 @@ html {
 
   .sobre-img {
     aspect-ratio: 4/3;
+  }
+
+  .sobre-texto {
+    text-align: center;
+  }
+
+  .sobre-texto .btn {
+    display: block;
   }
 }
 
@@ -311,6 +349,16 @@ html {
 .servicos-cta {
   text-align: center;
   margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .servicos {
+    padding: 4rem 0;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Contato Section */
@@ -399,9 +447,18 @@ html {
 }
 
 @media (max-width: 768px) {
+  .contato {
+    padding: 4rem 0;
+  }
+
   .contato-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .contato-form .btn {
+    align-self: stretch;
+    text-align: center;
   }
 }
 
