@@ -410,6 +410,11 @@ body {
   color: #333;
 }
 
+.contato-lista li a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .contato-lista .ph {
   font-size: 1.25rem;
   color: #1a1a1a;
