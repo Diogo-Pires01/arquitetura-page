@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pires Arquitetura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script defer>
+      window.addEventListener("scroll", () => {
+        document
+          .querySelector(".header")
+          .classList.toggle("scrolled", window.scrollY > 50);
+      });
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="header-logo">Pires Arquitetura</a>
+      <nav class="header-nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tag">Arquitetura &amp; Design</p>
+        <h1>Transformamos espaços<br />em experiências</h1>
+        <p class="hero-sub">
+          Projetos residenciais e comerciais com design autoral,<br />funcionalidade
+          e atenção a cada detalhe.
+        </p>
+        <div class="hero-ctas">
+          <a href="#servicos" class="btn btn-primary">Ver Serviços</a>
+          <a href="#contato" class="btn btn-outline">Fale Conosco</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div class="sobre-container">
+        <div class="sobre-img">
+          <img src="assets/personImg.png" alt="Danilo Pires, Arquiteto" />
+        </div>
+        <div class="sobre-texto">
+          <p class="section-tag">Sobre</p>
+          <h2>Danilo Pires</h2>
+          <p>
+            Arquiteto e designer de interiores com mais de 5 anos de experiência
+            em projetos residenciais e comerciais. Especializado em design de
+            interiores e construções sustentáveis.
+          </p>
+          <p>
+            Acredito que a arquitetura deve ser funcional, atemporal e refletir
+            a essência de quem habita o espaço. Cada projeto é uma oportunidade
+            de criar algo único.
+          </p>
+          <a href="#contato" class="btn btn-primary">Entre em Contato</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="servicos" id="servicos">
+      <div class="servicos-container">
+        <p class="section-tag">Serviços</p>
+        <h2>O que fazemos</h2>
+        <div class="servicos-grid">
+          <div class="card">
+            <i class="ph ph-couch"></i>
+            <h3>Projeto de Interiores</h3>
+            <p>Ambientes planejados com estética, conforto e personalidade.</p>
+          </div>
+          <div class="card">
+            <i class="ph ph-buildings"></i>
+            <h3>Projeto Arquitetônico</h3>
+            <p>Do conceito à execução, criando espaços que inspiram.</p>
+          </div>
+          <div class="card">
+            <i class="ph ph-ruler"></i>
+            <h3>Levantamento</h3>
+            <p>Análise técnica detalhada do espaço existente.</p>
+          </div>
+          <div class="card">
+            <i class="ph ph-file-text"></i>
+            <h3>Legalização</h3>
+            <p>Regularização de projetos junto aos órgãos competentes.</p>
+          </div>
+          <div class="card">
+            <i class="ph ph-hard-hat"></i>
+            <h3>Acompanhamento de Obra</h3>
+            <p>Supervisão para garantir qualidade e fidelidade ao projeto.</p>
+          </div>
+          <div class="card">
+            <i class="ph ph-compass-tool"></i>
+            <h3>Consultoria</h3>
+            <p>
+              Orientação especializada para tomada de decisões no seu projeto.
+            </p>
+          </div>
+        </div>
+        <div class="servicos-cta">
+          <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contato" id="contato">
+      <div class="contato-container">
+        <div class="contato-info">
+          <p class="section-tag">Contato</p>
+          <h2>Vamos conversar?</h2>
+          <p>Entre em contato para tirar dúvidas ou solicitar um orçamento.</p>
+          <ul class="contato-lista">
+            <li>
+              <i class="ph ph-envelope"></i>
+              <span>danilogparq@hotmail.com</span>
+            </li>
+            <li>
+              <i class="ph ph-phone"></i>
+              <span>(21) 97192-5197</span>
+            </li>
+            <li>
+              <i class="ph ph-instagram-logo"></i>
+              <span>@arqpires</span>
+            </li>
+          </ul>
+        </div>
+        <form class="contato-form">
+          <input type="text" name="nome" placeholder="Nome" required />
+          <input type="tel" name="telefone" placeholder="Telefone" required />
+          <input type="email" name="email" placeholder="E-mail" required />
+          <textarea
+            name="mensagem"
+            placeholder="Mensagem"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/5521971925197"
+      target="_blank"
+      class="whatsapp-btn"
+      aria-label="WhatsApp"
+    >
+      <i class="ph ph-whatsapp-logo"></i>
+    </a>
+  </body>
+</html>
