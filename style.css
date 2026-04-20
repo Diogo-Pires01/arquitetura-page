@@ -91,6 +91,10 @@ body {
   padding-left: clamp(2rem, 8vw, 10rem);
 }
 
+.hero-logo {
+  display: none;
+}
+
 .hero-tag {
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
@@ -191,6 +195,12 @@ body {
   .hero-ctas .btn {
     text-align: center;
   }
+
+  .hero-logo {
+    display: block;
+    width: 180px;
+    margin: 0 auto 2.5rem;
+  }
 }
 
 /* Sobre Section */
@@ -255,7 +265,7 @@ body {
   }
 
   .sobre-img {
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
   }
 
   .sobre-texto {
