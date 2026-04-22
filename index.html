@@ -3,15 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no, email=no, address=no" />
+    <meta
+      name="format-detection"
+      content="telephone=no, email=no, address=no"
+    />
     <title>Pires Arquitetura</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <script defer>
@@ -19,6 +26,45 @@
         document
           .querySelector(".header")
           .classList.toggle("scrolled", window.scrollY > 50);
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector(".contato-form");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          }).then((res) => {
+            if (res.ok) {
+              Toastify({
+                text: "Mensagem enviada com sucesso!",
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                style: {
+                  background: "#2ecc71",
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: "0.85rem",
+                },
+              }).showToast();
+              form.reset();
+            } else {
+              Toastify({
+                text: "Erro ao enviar. Tente novamente.",
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                style: {
+                  background: "#c0392b",
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: "0.85rem",
+                },
+              }).showToast();
+            }
+          });
+        });
       });
     </script>
   </head>
@@ -36,7 +82,11 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <img src="assets/logoMarca.png" alt="Pires Arquitetura" class="hero-logo" />
+        <img
+          src="assets/logoMarca.png"
+          alt="Pires Arquitetura"
+          class="hero-logo"
+        />
         <p class="hero-tag">Arquitetura &amp; Design</p>
         <h1>Transformamos espaços<br />em experiências</h1>
         <p class="hero-sub">
@@ -68,7 +118,12 @@
             a essência de quem habita o espaço. Cada projeto é uma oportunidade
             de criar algo único.
           </p>
-          <a href="#contato" class="btn btn-primary">Entre em Contato</a>
+          <a
+            href="https://wa.me/5521971925197"
+            target="_blank"
+            class="btn btn-primary"
+            >Fale no WhatsApp</a
+          >
         </div>
       </div>
     </section>
@@ -138,12 +193,17 @@
             </li>
           </ul>
         </div>
-        <form class="contato-form">
-          <input type="text" name="nome" placeholder="Nome" required />
-          <input type="tel" name="telefone" placeholder="Telefone" required />
-          <input type="email" name="email" placeholder="E-mail" required />
+        <form class="contato-form" action="" method="">
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nova mensagem - Pires Arquitetura"
+          />
+          <input type="text" name="Nome:" placeholder="Nome" required />
+          <input type="tel" name="Telefone:" placeholder="Telefone" required />
+          <input type="email" name="E-mail:" placeholder="E-mail" required />
           <textarea
-            name="mensagem"
+            name="Mensagem:"
             placeholder="Mensagem"
             rows="5"
             required
@@ -161,5 +221,6 @@
     >
       <i class="ph ph-whatsapp-logo"></i>
     </a>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>
