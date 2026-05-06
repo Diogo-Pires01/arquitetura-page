@@ -20,56 +20,23 @@
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <script defer>
-      window.addEventListener("scroll", () => {
-        document
-          .querySelector(".header")
-          .classList.toggle("scrolled", window.scrollY > 50);
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const form = document.querySelector(".contato-form");
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          fetch(form.action, {
-            method: "POST",
-            body: new FormData(form),
-            headers: { Accept: "application/json" },
-          }).then((res) => {
-            if (res.ok) {
-              Toastify({
-                text: "Mensagem enviada com sucesso!",
-                duration: 3000,
-                gravity: "top",
-                position: "right",
-                style: {
-                  background: "#2ecc71",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "0.85rem",
-                },
-              }).showToast();
-              form.reset();
-            } else {
-              Toastify({
-                text: "Erro ao enviar. Tente novamente.",
-                duration: 3000,
-                gravity: "top",
-                position: "right",
-                style: {
-                  background: "#c0392b",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "0.85rem",
-                },
-              }).showToast();
-            }
-          });
-        });
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="main.js" defer></script>
   </head>
 
   <body>
+    <div class="preloader">
+      <object
+        data="assets/blueprint.svg"
+        type="image/svg+xml"
+        class="preloader-blueprint"
+      ></object>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
+      <span class="preloader-percent">0%</span>
+    </div>
+
     <header class="header">
       <a href="#" class="header-logo">Pires Arquitetura</a>
       <nav class="header-nav">
@@ -221,6 +188,5 @@
     >
       <i class="ph ph-whatsapp-logo"></i>
     </a>
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>

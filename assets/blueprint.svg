@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 160" fill="none" stroke="#fff" stroke-width="0.8">
+  <style>
+    .bp-line {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawLine 1.4s ease forwards;
+    }
+    .bp-line:nth-child(2) { animation-delay: 0s; }
+    .bp-line:nth-child(3) { animation-delay: 0.1s; }
+    .bp-line:nth-child(4) { animation-delay: 0.2s; }
+    .bp-line:nth-child(5) { animation-delay: 0.32s; }
+    .bp-line:nth-child(6) { animation-delay: 0.44s; }
+    .bp-line:nth-child(7) { animation-delay: 0.56s; }
+    .bp-line:nth-child(8) { animation-delay: 0.66s; }
+    .bp-line:nth-child(9) { animation-delay: 0.76s; }
+    .bp-line:nth-child(10) { animation-delay: 0.86s; }
+    .bp-line:nth-child(11) { animation-delay: 0.96s; }
+    .bp-line:nth-child(12) { animation-delay: 1.06s; }
+    .bp-line:nth-child(13) { animation-delay: 1.16s; }
+    .bp-line:nth-child(14) { animation-delay: 1.24s; }
+    .bp-line:nth-child(15) { animation-delay: 1.32s; }
+    .bp-line:nth-child(16) { animation-delay: 1.4s; }
+    .bp-line:nth-child(17) { animation-delay: 1.46s; }
+    .bp-line:nth-child(18) { animation-delay: 1.5s; }
+    .bp-line:nth-child(19) { animation-delay: 1.54s; }
+    .bp-line:nth-child(20) { animation-delay: 1.57s; }
+    .bp-line:nth-child(21) { animation-delay: 1.6s; }
+    @keyframes drawLine { to { stroke-dashoffset: 0; } }
+  </style>
+  <!-- Paredes -->
+  <rect x="30" y="30" width="120" height="100" class="bp-line" />
+  <!-- Porta -->
+  <path d="M 30 108 Q 50 108 50 88" class="bp-line" />
+  <!-- Janela -->
+  <line x1="60" y1="30" x2="100" y2="30" class="bp-line" stroke-width="2.5" />
+  <!-- Cama -->
+  <rect x="85" y="38" width="55" height="44" rx="2" class="bp-line" stroke-width="0.5" />
+  <rect x="87" y="40" width="51" height="10" rx="1" class="bp-line" stroke-width="0.3" />
+  <!-- Travesseiros -->
+  <rect x="90" y="42" width="14" height="6" rx="2" class="bp-line" stroke-width="0.3" />
+  <rect x="108" y="42" width="14" height="6" rx="2" class="bp-line" stroke-width="0.3" />
+  <!-- Criado-mudo -->
+  <rect x="85" y="86" width="55" height="8" rx="0.5" class="bp-line" stroke-width="0.4" />
+  <!-- Guarda-roupa -->
+  <rect x="38" y="36" width="14" height="38" class="bp-line" stroke-width="0.5" />
+  <line x1="45" y1="36" x2="45" y2="74" class="bp-line" stroke-width="0.3" />
+  <!-- Cota superior -->
+  <line x1="30" y1="20" x2="150" y2="20" class="bp-line" stroke-width="0.3" />
+  <line x1="30" y1="17" x2="30" y2="23" class="bp-line" stroke-width="0.3" />
+  <line x1="150" y1="17" x2="150" y2="23" class="bp-line" stroke-width="0.3" />
+  <text x="90" y="17" text-anchor="middle" fill="rgba(255,255,255,0.5)" stroke="none" font-size="5" font-family="Inter, sans-serif">4.20</text>
+  <!-- Cota lateral -->
+  <line x1="20" y1="30" x2="20" y2="130" class="bp-line" stroke-width="0.3" />
+  <line x1="17" y1="30" x2="23" y2="30" class="bp-line" stroke-width="0.3" />
+  <line x1="17" y1="130" x2="23" y2="130" class="bp-line" stroke-width="0.3" />
+  <text x="15" y="83" text-anchor="middle" fill="rgba(255,255,255,0.5)" stroke="none" font-size="5" font-family="Inter, sans-serif" transform="rotate(-90 15 83)">3.50</text>
+  <!-- Norte -->
+  <line x1="160" y1="50" x2="160" y2="34" class="bp-line" stroke-width="0.5" />
+  <polygon points="160,32 157,38 163,38" fill="rgba(255,255,255,0.6)" stroke="none" class="bp-line" />
+  <text x="160" y="57" text-anchor="middle" fill="rgba(255,255,255,0.5)" stroke="none" font-size="5" font-family="Inter, sans-serif">N</text>
+</svg>
